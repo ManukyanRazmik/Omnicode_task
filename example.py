@@ -1,5 +1,5 @@
 from transformers import GPT2LMHeadModel, GPT2Tokenizer
-from generator import generate_text
+from utils import generate_text
 
 # Load pretrained GPT-2 model and tokenizer
 model_path = "./tuned_model"
@@ -13,5 +13,5 @@ max_length = 600
 
 generated_text = generate_text(model, tokenizer, min_length, max_length)
 
-with open('data/generated.txt', 'w', encoding='utf-8') as file:
+with open('data/generated/generated.txt', 'w', encoding='utf-8') as file:
 	file.write(generated_text)
